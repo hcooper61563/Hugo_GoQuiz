@@ -1,4 +1,7 @@
-package View;
+
+import Model.DatabaseConnection;
+import Model.Users;
+import Model.UsersService;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -18,7 +21,10 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+
 public class Main extends Application {
+    public static DatabaseConnection database;//Calling Database connection
     public static void main(String[] args) {
         launch(args);
     }
@@ -26,6 +32,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        DatabaseConnection  database=new DatabaseConnection("GoQuiz_db.db");//opening my database file
+
         primaryStage.setTitle("GoQuiz");//Setting my stage
         primaryStage.show();
         primaryStage.setResizable(false);
@@ -59,6 +67,7 @@ public class Main extends Application {
         grid.add(pw, 0, 2);
         PasswordField pwBox = new PasswordField();
         grid.add(pwBox, 1, 2);
+
 
     }
 
