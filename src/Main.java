@@ -29,7 +29,7 @@ public class Main extends Application {
         launch(args);
     }
 
-
+//adding this comment so i can do another commit
     @Override
     public void start(Stage primaryStage) {
         DatabaseConnection  database=new DatabaseConnection("GoQuiz_db.db");//opening my database file
