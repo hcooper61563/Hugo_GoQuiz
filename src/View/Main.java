@@ -1,7 +1,5 @@
+package View;
 
-import Model.DatabaseConnection;
-import Model.Users;
-import Model.UsersService;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -16,23 +14,23 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
+
 
 public class Main extends Application {
-    public static DatabaseConnection database;//Calling Database connection
     public static void main(String[] args) {
         launch(args);
     }
 
-//adding this comment so i can do another commit
+
     @Override
     public void start(Stage primaryStage) {
-        DatabaseConnection  database=new DatabaseConnection("GoQuiz_db.db");//opening my database file
+
 
         primaryStage.setTitle("GoQuiz");//Setting my stage
         primaryStage.show();
@@ -51,6 +49,15 @@ public class Main extends Application {
         hbBtn.getChildren().add(btn);
         grid.add(hbBtn, 1, 4);
 
+        btn.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent e) {
+                actiontarget.setFill(Color.FIREBRICK);
+                actiontarget.setText("Sign in button pressed");
+            }
+        });
+
         Scene scene = new Scene(grid, 300, 275);
         primaryStage.setScene(scene);
 
@@ -68,8 +75,6 @@ public class Main extends Application {
         PasswordField pwBox = new PasswordField();
         grid.add(pwBox, 1, 2);
 
-
+        }
     }
 
-
-}

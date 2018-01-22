@@ -1,17 +1,36 @@
 package Model;
 
 public class Users {
-    private int UserID;
+    private String username;
+    private int userID;
 
-    public Users(int userID) {
-        UserID = userID;
+
+    public Users(int userID, String username) {
+        this.userID = userID;
+        this.username = username;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public int getUserID() {
-        return UserID;
+        return userID;
     }
 
     public void setUserID(int userID) {
-        UserID = userID;
+        this.userID = userID;
+    }
+
+    @Override
+    public String toString() {
+        return "Users{" +
+                "userid=" + userID +
+                ", username='" + username + '\'' +
+                '}';
     }
 }

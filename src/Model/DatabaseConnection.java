@@ -5,8 +5,11 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
+
 public class DatabaseConnection {
     private Connection connection = null;
+
+
     public DatabaseConnection(String dbFile)
     {
         try
