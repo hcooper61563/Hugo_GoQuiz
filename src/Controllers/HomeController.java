@@ -1,13 +1,13 @@
 package Controllers;
 
 import View.Login;
-import View.Quizes;
+import View.QuizSelect;
 import View.Scores;
 
 public class HomeController {
 
     public static void moveToQuizes(){
-        Login.primaryStage.setScene(Quizes.generateScene());
+        Login.primaryStage.setScene(QuizSelect.generateScene());
     }
 
     public static void moveToScores(){
