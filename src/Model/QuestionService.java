@@ -1,17 +1,14 @@
 package Model;
 
-import Model.DatabaseConnection;
-import Model.Quiz;
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class QuizService {
-    public static void selectAll(List<Quiz> targetList, DatabaseConnection database) {
+public class QuestionService {
+    public static void selectAll(List<Question> targetList, DatabaseConnection database) {
 
-        PreparedStatement statement = database.newStatement("SELECT QuizID, QuizName FROM Quiz");
+        PreparedStatement statement = database.newStatement("SELECT Questions, QuestionID, QuizID, CorrectAnswer FROM Question");
 
         try {
             if (statement != null) {
@@ -20,10 +17,11 @@ public class QuizService {
 
                 if (results != null) {
                     while (results.next()) {
-                        targetList.add(new Quiz(
+                        targetList.add(new Question(
                                 results.getInt("QuizID"),
-                                results.getString("QuizName")
-
+                                results.getInt("QuizID"),
+                                results.getString("Questions"),
+                                results.getString("CorrectAnswer")
                         ));
                     }
                 }

@@ -4,6 +4,7 @@ import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 
 public class Scores {
     public static Scene generateScene() {
@@ -18,8 +19,13 @@ public class Scores {
         Button button2 = new Button("SECOND TO LAST QUIZ");
         button2.setStyle("-fx-font-size: 64pt");
 
-        root.getChildren().addAll( button1, button2);
 
+
+        Button buttonX=new Button("Home");
+        buttonX.setFont(Font.font("Tahoma", 20));
+        buttonX.setOnAction(ae-> Login.primaryStage.setScene(Home.generateScene()));
+
+        root.getChildren().addAll( button1, button2,buttonX);
         return scene;
     }
 }
