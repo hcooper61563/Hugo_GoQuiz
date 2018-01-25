@@ -1,5 +1,6 @@
 package Controllers;
 
+import View.EndOfQuiz;
 import View.Home;
 import View.Login;
 import View.Quiz;
@@ -24,7 +25,8 @@ public class QuizController {
         if ( QuizController.questionCounter == 2 ) {
 
             System.out.println("You scored " + score + " out of " + questionCounter);
-            Login.primaryStage.setScene(Home.generateScene());
+
+            Login.primaryStage.setScene(EndOfQuiz.generateScene(score));
 
         }
         else {
