@@ -8,7 +8,7 @@ import java.util.List;
 public class QuestionService {
     public static void selectAll(List<Question> targetList, DatabaseConnection database) {
 
-        PreparedStatement statement = database.newStatement("SELECT Questions, QuestionID, QuizID, CorrectAnswer FROM Question");
+        PreparedStatement statement = database.newStatement("SELECT Questions, QuestionID, QuizID, CorrectAnswer, WrongAnswer1, WrongAnswer2, WrongAnswer3 FROM Question");
 
         try {
             if (statement != null) {
@@ -21,7 +21,10 @@ public class QuestionService {
                                 results.getInt("QuizID"),
                                 results.getInt("QuizID"),
                                 results.getString("Questions"),
-                                results.getString("CorrectAnswer")
+                                results.getString("CorrectAnswer"),
+                                results.getString("WrongAnswer1"),
+                                results.getString("WrongAnswer2"),
+                                results.getString("WrongAnswer3")
                         ));
                     }
                 }

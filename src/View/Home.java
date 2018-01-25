@@ -2,12 +2,8 @@ package View;
 
 import Controllers.HomeController;
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -35,10 +31,8 @@ public class Home {
             button1.setOnAction(ae -> HomeController.moveToQuizes());
             button2.setOnAction(ae-> HomeController.moveToScores());
 
-
             return scene;
 
         }
-
 
 }

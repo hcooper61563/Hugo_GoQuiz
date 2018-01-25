@@ -5,14 +5,9 @@ public class Question {
     private int QuizID;
     private String Questions;
     private String CorrectAnswer;
-
-
-    public Question(int questionID, int quizID, String questions, String correctAnswer) {
-        QuestionID = questionID;
-        QuizID = quizID;
-        Questions = questions;
-        CorrectAnswer= correctAnswer;
-    }
+    private String WrongAnswer1;
+    private String WrongAnswer2;
+    private String WrongAnswer3;
 
     public int getQuestionID() {
         return QuestionID;
@@ -44,6 +39,40 @@ public class Question {
 
     public void setCorrectAnswer(String correctAnswer) {
         CorrectAnswer = correctAnswer;
+    }
+
+    public String getWrongAnswer1() {
+        return WrongAnswer1;
+    }
+
+    public void setWrongAnswer1(String wrongAnswer1) {
+        WrongAnswer1 = wrongAnswer1;
+    }
+
+    public String getWrongAnswer2() {
+        return WrongAnswer2;
+    }
+
+    public void setWrongAnswer2(String wrongAnswer2) {
+        WrongAnswer2 = wrongAnswer2;
+    }
+
+    public String getWrongAnswer3() {
+        return WrongAnswer3;
+    }
+
+    public void setWrongAnswer3(String wrongAnswer3) {
+        WrongAnswer3 = wrongAnswer3;
+    }
+
+    public Question(int questionID, int quizID, String questions, String correctAnswer, String wrongAnswer1, String wrongAnswer2, String wrongAnswer3) {
+        QuestionID = questionID;
+        QuizID = quizID;
+        Questions = questions;
+        CorrectAnswer = correctAnswer;
+        WrongAnswer1 = wrongAnswer1;
+        WrongAnswer2 = wrongAnswer2;
+        WrongAnswer3 = wrongAnswer3;
     }
 
     @Override
