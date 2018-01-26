@@ -22,7 +22,7 @@ public class QuizController {
             System.out.println("Well darn :(");
         }
 
-        if ( QuizController.questionCounter == 2 ) {
+        if ( QuizController.questionCounter == 5 ) {
 
             System.out.println("You scored " + score + " out of " + questionCounter);
 

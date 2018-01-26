@@ -31,7 +31,7 @@ public class Quiz {
         grid.setVgap(10);
         grid.setPadding(new Insets(25, 25, 25, 25));
 
-        Scene scene = new Scene(grid, 600, 550);
+        Scene scene = new Scene(grid, 900, 825   m   );
 
         Text scenetitle = new Text("GoQuiz");//Adding text that says 'GoQuiz' under the scenetitle variable
         scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
@@ -44,32 +44,34 @@ public class Quiz {
         Button answer[] = new Button[4];
 
         ArrayList<Integer> columns = new ArrayList<>();
-        columns.add(0); columns.add(1); columns.add(2); columns.add(3);
+        columns.add(0);
+        columns.add(1);
+        columns.add(2);
+        columns.add(3);
         Collections.shuffle(columns);
 
         answer[0] = new Button(q.getCorrectAnswer());
-        answer[0].setFont(Font.font("Tahoma",FontWeight.NORMAL,20));
-        grid.add(answer[0], columns.get(0),2,1,1);
+        answer[0].setFont(Font.font("Tahoma", FontWeight.NORMAL, 12));
+        grid.add(answer[0], columns.get(0), 2, 1, 1);
         answer[0].setOnAction(ae -> QuizController.submitAnswer(true));
 
         answer[1] = new Button(q.getWrongAnswer1());
-        answer[1].setFont(Font.font("Tahoma",FontWeight.NORMAL,20));
-        grid.add(answer[1],columns.get(1),2,1,1);
+        answer[1].setFont(Font.font("Tahoma", FontWeight.NORMAL, 12));
+        grid.add(answer[1], columns.get(1), 2, 1, 1);
         answer[1].setOnAction(ae -> QuizController.submitAnswer(false));
 
         answer[2] = new Button(q.getWrongAnswer2());
-        answer[2].setFont(Font.font("Tahoma",FontWeight.NORMAL,20));
-        grid.add(answer[2],columns.get(2),2,1,1);
+        answer[2].setFont(Font.font("Tahoma", FontWeight.NORMAL, 12));
+        grid.add(answer[2], columns.get(2), 2, 1, 1);
         answer[2].setOnAction(ae -> QuizController.submitAnswer(false));
 
         answer[3] = new Button(q.getWrongAnswer3());
-        answer[3].setFont(Font.font("Tahoma",FontWeight.NORMAL,20));
-        grid.add(answer[3],columns.get(3),2,1,1);
+        answer[3].setFont(Font.font("Tahoma", FontWeight.NORMAL, 12));
+        grid.add(answer[3], columns.get(3), 2, 1, 1);
         answer[3].setOnAction(ae -> QuizController.submitAnswer(false));
 
         Login.primaryStage.setScene(scene);
 
     }
 }
-
 
