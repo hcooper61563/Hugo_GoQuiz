@@ -10,7 +10,7 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
 public class EndOfQuiz {
-
+//shows at the end of each quiz
     public static Scene generateScene(int score) {
 
         VBox root = new VBox(10);
