@@ -4,8 +4,6 @@ package View;
 import Controllers.LoginController;
 import Model.DatabaseConnection;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -15,13 +13,12 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+///All of the imports required for the following code
 
 
 public class Login extends Application {
@@ -45,7 +42,7 @@ public class Login extends Application {
         primaryStage.show();
         primaryStage.setResizable(false);
 
-        GridPane grid = new GridPane();//Creating a grid pane to put my text fields and labels on
+        GridPane grid = new GridPane();//Creating a grid pane to put my text fields, labels and buttons on
         grid.setAlignment(Pos.CENTER);
         grid.setHgap(10);
         grid.setVgap(10);
@@ -66,6 +63,7 @@ public class Login extends Application {
 
         Label userName = new Label("User Name:");//Setting a 'username' label, and adding a text field nex to it
         grid.add(userName, 0, 1);
+
         TextField userTextField = new TextField();
         grid.add(userTextField, 1, 1);
         userTextField.setText("Steve");     //TEMPORARY!!!
@@ -77,7 +75,6 @@ public class Login extends Application {
         pwBox.setText("Hugo123");        //TEMPORARY!!!
 
         btn.setOnAction(ae -> LoginController.attemptLogin(userTextField.getText(), pwBox.getText()));
-
     }
 }
 

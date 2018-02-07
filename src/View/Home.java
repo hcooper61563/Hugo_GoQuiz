@@ -28,7 +28,7 @@ public class Home {
             button2.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
 
             root.getChildren().addAll(sceneTitle, button1, button2);
-            button1.setOnAction(ae -> HomeController.moveToQuizes());
+            button1.setOnAction(ae -> Login.primaryStage.setScene(QuizSelect.generateScene()));
             button2.setOnAction(ae-> HomeController.moveToScores());
 
             return scene;

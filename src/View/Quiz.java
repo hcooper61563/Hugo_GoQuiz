@@ -54,21 +54,25 @@ public class Quiz {
         answer[0].setFont(Font.font("Tahoma", FontWeight.NORMAL, 12));
         grid.add(answer[0], columns.get(0), 2, 1, 1);
         answer[0].setOnAction(ae -> QuizController.submitAnswer(true));
+        answer[0].setFocusTraversable(false);
 
         answer[1] = new Button(q.getWrongAnswer1());
         answer[1].setFont(Font.font("Tahoma", FontWeight.NORMAL, 12));
         grid.add(answer[1], columns.get(1), 2, 1, 1);
         answer[1].setOnAction(ae -> QuizController.submitAnswer(false));
+        answer[1].setFocusTraversable(false);
 
         answer[2] = new Button(q.getWrongAnswer2());
         answer[2].setFont(Font.font("Tahoma", FontWeight.NORMAL, 12));
         grid.add(answer[2], columns.get(2), 2, 1, 1);
         answer[2].setOnAction(ae -> QuizController.submitAnswer(false));
+        answer[2].setFocusTraversable(false);
 
         answer[3] = new Button(q.getWrongAnswer3());
         answer[3].setFont(Font.font("Tahoma", FontWeight.NORMAL, 12));
         grid.add(answer[3], columns.get(3), 2, 1, 1);
         answer[3].setOnAction(ae -> QuizController.submitAnswer(false));
+        answer[3].setFocusTraversable(false);
 
         Login.primaryStage.setScene(scene);
 
