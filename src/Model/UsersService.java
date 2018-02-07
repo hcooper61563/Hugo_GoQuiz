@@ -1,4 +1,7 @@
+/*
 package Model;
+
+import Controllers.ChangePasswordController;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -29,6 +32,16 @@ public class UsersService {
             System.out.println("Database select all error: " + resultsException.getMessage());
         }
     }
-}
 
+    public static void save (ChangePasswordController itemToSave , DatabaseConnection database){
+
+        try{
+            PreparedStatement statement= database.newStatement("UPDATE Users SET Password=" + itemToSave + "WHERE id="+)
+                    statement.setString(1,itemToSave.getPassword());
+            }catch (SQLException resultsException){
+            System.out.println("Database saving error: "+ resultsException.getMessage());
+            }
+        }
+}
+*/
 

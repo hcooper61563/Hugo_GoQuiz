@@ -3,6 +3,8 @@ package View;
 
 import Controllers.LoginController;
 import Model.DatabaseConnection;
+import Model.Users;
+import Model.UsersService;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -22,19 +24,27 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
 
 
-public class Login extends Application {
+public class Login extends Application{
+        //Makes login a subclass of the JavaFX superclass application, allowing the program to all its methods in order to build a JavaFX stage
 
-    public static DatabaseConnection database;
 
-    public static Stage primaryStage;
 
-    public static void main(String[] args) {
-        database = new DatabaseConnection("coursework_database.db");
-        launch(args);
-    }
+        public static Stage primaryStage;
+        //sets a primary stage using the Application method primary stage
 
+
+        public static DatabaseConnection database;
+        public static void main(String[] args) {//opens a new database connection in the main class (Login) that can be accessed anywhere within the program.
+            database = new DatabaseConnection("coursework_database.db");
+            launch(args);
+
+            System.out.println("Database connection established ");
+
+
+        }
 
     @Override
     public void start(Stage initialStage) {
@@ -68,17 +78,24 @@ public class Login extends Application {
         grid.add(userName, 0, 1);
         TextField userTextField = new TextField();
         grid.add(userTextField, 1, 1);
-        userTextField.setText("Steve");     //TEMPORARY!!!
+        userTextField.setText("Steve");//TEMPORARY
 
         Label pw = new Label("Password:");//Setting a 'password' label and adding a text field next to it
         grid.add(pw, 0, 2);
         PasswordField pwBox = new PasswordField();
         grid.add(pwBox, 1, 2);
-        pwBox.setText("Hugo123");        //TEMPORARY!!!
+        pwBox.setText("Hugo123");
 
-        btn.setOnAction(ae -> LoginController.attemptLogin(userTextField.getText(), pwBox.getText()));
+
+
+
+        btn.setOnAction(ae -> LoginController.attemptLogin( userTextField.getText(),pwBox.getText()));
+
+
+        }
+
 
     }
-}
+
 
 

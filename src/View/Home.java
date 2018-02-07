@@ -1,6 +1,5 @@
 package View;
 
-import Controllers.HomeController;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -27,11 +26,17 @@ public class Home {
             Button button2 = new Button("View Scores");
             button2.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
 
-            root.getChildren().addAll(sceneTitle, button1, button2);
-            button1.setOnAction(ae -> HomeController.moveToQuizes());
-            button2.setOnAction(ae-> HomeController.moveToScores());
+            Button button3 = new Button("Settings");
+            button3.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
+
+
+            root.getChildren().addAll(sceneTitle, button1, button2,button3);
+            button1.setOnAction(ae -> Login.primaryStage.setScene(QuizSelect.generateScene()));
+            button2.setOnAction(ae-> Login.primaryStage.setScene(Scores.generateScene()));
+            button3.setOnAction(ae->Login.primaryStage.setScene((Settings.generateScene())));
 
             return scene;
+
 
         }
 
