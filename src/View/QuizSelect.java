@@ -1,7 +1,5 @@
 package View;
 
-import Controllers.HomeController;
-import Controllers.LoginController;
 import Controllers.QuizSelectController;
 import Model.Quiz;
 import Model.QuizService;
