@@ -1,8 +1,10 @@
 package View;
 
+import Model.ScoresTable;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
@@ -17,6 +19,9 @@ public class Scores {
         Scene scene = new Scene(root);
 
         TableView table = new TableView<>();
+        TableColumn col1 = new TableColumn("Quiz Name");
+        TableColumn col2 = new TableColumn("Score");
+        table.getColumns().addAll(col1, col2);
 
         Text sceneTitle = new Text ("GoScores");
         sceneTitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));

@@ -23,7 +23,8 @@ public class Quiz {
 
         System.out.println("Question number " + QuizController.questionCounter);
 
-        Question q = QuizSelectController.currentQuestions.pop();
+
+
 
         GridPane grid = new GridPane();//Creating a grid pane to put my text fields and labels on
         grid.setAlignment(Pos.CENTER);
@@ -31,7 +32,7 @@ public class Quiz {
         grid.setVgap(10);
         grid.setPadding(new Insets(25, 25, 25, 25));
 
-        Scene scene = new Scene(grid, 900, 825 );
+        Scene scene = new Scene(grid );
 
         Text scenetitle = new Text("GoQuiz");//Adding text that says 'GoQuiz' under the scenetitle variable
         scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));

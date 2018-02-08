@@ -11,8 +11,8 @@ import java.util.ArrayList;
 
 
 public class LoginController {
-
-    public static void attemptLogin(String username, String password) {
+    public static int currentUser;
+    public static void attemptLogin(String username, String password ) {
 
         ArrayList<Users> allUsers = new ArrayList<>();
 
@@ -27,6 +27,7 @@ public class LoginController {
 
                     /// NEXT SCENE...
 
+                    currentUser=(u.getUserID());
                     Login.primaryStage.setScene(Home.generateScene());
 
                     return;

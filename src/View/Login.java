@@ -57,8 +57,8 @@ public class Login extends Application{
         hbBtn.getChildren().add(btn);
         grid.add(hbBtn, 1, 4);
 
-        Scene scene = new Scene(grid, 300, 275);
-        primaryStage.setScene(scene);
+        Scene loginscene = new Scene(grid, 300, 275);
+        primaryStage.setScene(loginscene);
 
         Text scenetitle = new Text("GoQuiz");//Adding text that says 'GoQuiz' under the scenetitle variable
         scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
@@ -80,7 +80,7 @@ public class Login extends Application{
 
 
 
-        btn.setOnAction(ae -> LoginController.attemptLogin( userTextField.getText(),pwBox.getText()));
+        btn.setOnAction(ae -> LoginController.attemptLogin( userTextField.getText(),pwBox.getText(), loginscene));
 
 
         }

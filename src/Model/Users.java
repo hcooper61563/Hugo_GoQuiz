@@ -6,6 +6,21 @@ public class Users {
     private String username;
     private String password;
 
+
+    private int currentUser;
+
+    public Users(int userID) {
+        this.userID = userID;
+    }
+
+    public int getCurrentUser() {
+        return currentUser;
+    }
+
+    public void setCurrentUser(int currentUser) {
+        this.currentUser = currentUser;
+    }
+
     public Users(int userID, String username, String password) {
         this.userID = userID;
         this.username = username;

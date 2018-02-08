@@ -20,7 +20,7 @@ public class QuizSelect {
         VBox root = new VBox(10);
         root.setPadding(new Insets(50));
 
-        Scene scene = new Scene(root,300, 275);
+        Scene scene = new Scene(root);
 
         Text sceneTitle = new Text("Quiz Select");
         sceneTitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));

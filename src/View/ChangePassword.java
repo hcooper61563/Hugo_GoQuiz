@@ -1,4 +1,4 @@
-/*
+
 package View;
 
 import Controllers.ChangePasswordController;
@@ -19,8 +19,8 @@ public class ChangePassword {
 
         VBox root = new VBox(10);
         root.setPadding(new Insets(50));
-
-        Scene scene = new Scene(root,400, 350);
+//,400, 350
+        Scene scene = new Scene(root);
 
         Text sceneTitle = new Text("GoChange Password");
         sceneTitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
@@ -53,4 +53,3 @@ public class ChangePassword {
         return scene;
     }
 }
-*/

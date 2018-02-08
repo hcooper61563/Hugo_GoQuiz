@@ -1,10 +1,11 @@
 package Model;
 
 public class Scores {
-    public Scores(int userID, int score, String quizName) {
+    public Scores(int userID, int score, int quizID) {
         UserID = userID;
+        QuizID= quizID;
         Score = score;
-        QuizName = quizName;
+
     }
 
     public int getUserID() {
@@ -23,17 +24,17 @@ public class Scores {
         Score = score;
     }
 
-    public String getQuizName() {
-        return QuizName;
+    public int getQuizID() {
+        return QuizID;
     }
 
-    public void setQuizName(String quizName) {
-        QuizName = quizName;
+    public void setQuizID(int quizID) {
+        QuizID = quizID;
     }
 
     private  int UserID;
     private  int Score;
-    private  String QuizName;
+    private  int  QuizID;
 
 
 }

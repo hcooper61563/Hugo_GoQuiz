@@ -14,8 +14,10 @@ public class QuizSelectController {
 
     public static Stack<Question> currentQuestions;
 
+    public static int currentQuiz;//creates variable for current quizID
     public static void buildQuiz(int quizID) {
 
+        currentQuiz=quizID;
         currentQuestions = new Stack<>();
 
         System.out.println("You made it this far: Quiz ID " + quizID);//shows which quiz has been seleced
